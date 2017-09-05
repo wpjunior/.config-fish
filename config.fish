@@ -18,6 +18,9 @@ emit virtualfish_did_setup_plugins
 alias ec='emacsclient -n'
 alias t='tsuru'
 alias g='git'
+alias m='make'
+alias wk='workon'
+alias stg='git diff --staged'
 
 # Go
 set -x GOPATH $HOME/.go
