@@ -1,1 +1,1 @@
-/Users/wilson.junior/.local/share/omf/themes/scorphish/fish_prompt.fish
+/home/wilson/.local/share/omf/themes/pure/fish_prompt.fish
