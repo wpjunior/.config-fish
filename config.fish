@@ -8,6 +8,8 @@ set -gx OMF_PATH "/home/wilson/.local/share/omf"
 set PROJECT_HOME $HOME/Globo
 set VIRTUALFISH_COMPAT_ALIASES
 
+set GREP_OPTIONS '--color=always'
+
 source /usr/lib/python3.6/site-packages/virtualfish/virtual.fish
 source /usr/lib/python3.6/site-packages/virtualfish/auto_activation.fish
 source /usr/lib/python3.6/site-packages/virtualfish/compat_aliases.fish
@@ -20,6 +22,7 @@ alias t='tsuru'
 alias g='git'
 alias m='make'
 alias wk='workon'
+alias pbcopy='xclip -i'
 alias stg='git diff --staged'
 
 # Go
