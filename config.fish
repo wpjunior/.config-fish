@@ -28,6 +28,8 @@ alias stg='git diff --staged'
 # Go
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
+# my personal bins
+set -x PATH $HOME/.bin $PATH
 
 # Load oh-my-fish configuration.
 
@@ -39,6 +41,10 @@ end
 
 function __check_nvm --on-variable PWD --description 'Check for .node-version file'
   if test -e .node-version
-     nvm use (cat .node-version)
+     nvm use --silent (cat .node-version)
   end
+end
+
+if test -e .node-version
+    nvm use --silent (cat .node-version)
 end
