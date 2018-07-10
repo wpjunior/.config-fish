@@ -28,6 +28,9 @@ alias stg='git diff --staged'
 # Go
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
+
+set -x EDITOR emacsclient
+
 # my personal bins
 set -x PATH $HOME/.bin $PATH
 
