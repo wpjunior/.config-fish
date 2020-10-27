@@ -9,12 +9,14 @@ set PROJECT_HOME $HOME/Globo
 set VIRTUALFISH_COMPAT_ALIASES
 
 set GREP_OPTIONS '--color=always'
+set -g theme_display_k8s_context yes
 
 source /usr/lib/python3.6/site-packages/virtualfish/virtual.fish
 source /usr/lib/python3.6/site-packages/virtualfish/auto_activation.fish
 source /usr/lib/python3.6/site-packages/virtualfish/compat_aliases.fish
 source /usr/lib/python3.6/site-packages/virtualfish/global_requirements.fish
 source /usr/lib/python3.6/site-packages/virtualfish/projects.fish
+source $HOME/.config/fish/completions/kubectl_aliases.fish
 emit virtualfish_did_setup_plugins
 
 alias ec='emacsclient -n'
@@ -24,6 +26,12 @@ alias m='make'
 alias wk='workon'
 alias pbcopy='xclip -i'
 alias stg='git diff --staged'
+alias cat='bat'
+alias du='ncdu'
+alias curl-latency='curl -w "@/home/wilson/.config/curl-latency.txt" -o /dev/null -s'
+alias icat='kitty +kitten icat'
+alias tprod='tsuru --target=https://tsuru.globoi.com'
+alias tlab='tsuru --target=https://lab.tsuru.globoi.com'
 
 # Go
 set -x GOPATH $HOME/go
@@ -51,3 +59,5 @@ end
 if test -e .node-version
     nvm use --silent (cat .node-version)
 end
+
+kitty + complete setup fish | source
