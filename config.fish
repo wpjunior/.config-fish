@@ -22,6 +22,8 @@ set VIRTUALFISH_COMPAT_ALIASES
 
 set GREP_OPTIONS '--color=always'
 set -g theme_display_k8s_context yes
+set -g theme_display_k8s_namespace yes
+set -g theme_git_default_branches main trunk master
 
 source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/virtual.fish
 source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/auto_activation.fish
@@ -36,9 +38,9 @@ alias t='tsuru'
 alias g='git'
 alias m='make'
 alias wk='workon'
-alias pbcopy='xclip -i'
+#alias pbcopy='xclip -i'
 alias stg='git diff --staged'
-alias cat='bat'
+alias cat='bat -p'
 alias du='ncdu'
 alias tf='terraform'
 alias tffmt='terraform fmt -recursive'
@@ -46,6 +48,8 @@ alias curl-latency='curl -w "@/home/wilson/.config/curl-latency.txt" -o /dev/nul
 alias icat='kitty +kitten icat'
 alias tprod='tsuru --target=https://tsuru.globoi.com'
 alias tlab='tsuru --target=https://lab.tsuru.globoi.com'
+alias rfe='tsuru --target=https://tsuru.globoi.com rpaasv2 info -s rpaasv2-fe -i'
+alias rbe='tsuru --target=https://tsuru.globoi.com rpaasv2 info -s rpaasv2-be -i'
 
 # Go
 set -x GOPATH $HOME/go
