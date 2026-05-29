@@ -8,7 +8,7 @@ function ff
   if test (count $argv) -gt 1
     set branch "$argv[2]"
   else
-    set branch "master"
+    set branch "main"
   end
 
   echo "git pull $remote $branch --ff-only"
