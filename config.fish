@@ -1,8 +1,8 @@
 # Path to Oh My Fish install.
-set -gx OMF_PATH "/Users/wilson.junior/.local/share/omf"
+set -gx OMF_PATH "/Users/wilson/.local/share/omf"
 
 # Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG "/Users/wilson.junior/.config/omf"
+#set -gx OMF_CONFIG "/Users/wilson/.config/omf"
 
 # homebrew
 set -gx HOMEBREW_PREFIX "/opt/homebrew";
@@ -25,11 +25,11 @@ set -g theme_display_k8s_context yes
 set -g theme_display_k8s_namespace yes
 set -g theme_git_default_branches main trunk master
 
-source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/virtual.fish
-source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/auto_activation.fish
-source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/compat_aliases.fish
-source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/global_requirements.fish
-source /Users/wilson.junior/Library/Python/3.8/lib/python/site-packages/virtualfish/projects.fish
+source /Users/wilson/Library/Python/3.9/lib/python/site-packages/virtualfish/virtual.fish
+source /Users/wilson/Library/Python/3.9/lib/python/site-packages/virtualfish/auto_activation.fish
+source /Users/wilson/Library/Python/3.9/lib/python/site-packages/virtualfish/compat_aliases.fish
+source /Users/wilson/Library/Python/3.9/lib/python/site-packages/virtualfish/global_requirements.fish
+source /Users/wilson/Library/Python/3.9/lib/python/site-packages/virtualfish/projects.fish
 source $HOME/.config/fish/completions/kubectl_aliases.fish
 emit virtualfish_did_setup_plugins
 
@@ -47,9 +47,11 @@ alias tffmt='terraform fmt -recursive'
 alias curl-latency='curl -w "@/home/wilson/.config/curl-latency.txt" -o /dev/null -s'
 alias icat='kitty +kitten icat'
 alias tprod='tsuru --target=https://tsuru.globoi.com'
+alias ta='tsuru --target=https://tsuru.globoi.com app info'
 alias tlab='tsuru --target=https://lab.tsuru.globoi.com'
 alias rfe='tsuru --target=https://tsuru.globoi.com rpaasv2 info -s rpaasv2-fe -i'
 alias rbe='tsuru --target=https://tsuru.globoi.com rpaasv2 info -s rpaasv2-be -i'
+
 
 # Go
 set -x GOPATH $HOME/go
@@ -82,3 +84,8 @@ if test -e .node-version
 end
 
 # kitty + complete setup fish | source
+
+
+# https://rvm.io/integration/fish
+# curl -L --create-dirs -o ~/.config/fish/functions/rvm.fish https://raw.github.com/lunks/fish-nuggets/master/functions/rvm.fish
+rvm default
