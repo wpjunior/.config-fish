@@ -73,6 +73,10 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
 end
 
+function gssh
+    gcloud compute ssh $argv[2] --project $argv[1] --internal-ip
+end
+
 function __check_nvm --on-variable PWD --description 'Check for .node-version file'
   if test -e .node-version
      nvm use --silent (cat .node-version)
