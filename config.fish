@@ -46,6 +46,9 @@ alias tf='terraform'
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
 
+# Local binaries
+set -x PATH $HOME/.bin $PATH
+
 # mac stuff
 set -x PATH /usr/local/bin $PATH
 set -x PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
