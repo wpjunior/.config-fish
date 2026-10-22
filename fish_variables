@@ -1,3 +1,4 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR fish_features:no\x2dquery\x2dterm
+SETUVAR fish_user_paths:/Users/wilson\x2ejunior/\x2elocal/bin

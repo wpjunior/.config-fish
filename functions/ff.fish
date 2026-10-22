@@ -7,6 +7,10 @@ function ff
 
   if test (count $argv) -gt 1
     set branch "$argv[2]"
+  else if git show-ref --verify --quiet refs/heads/main
+    set branch "main"
+  else if git show-ref --verify --quiet refs/heads/master
+    set branch "master"
   else
     set branch "main"
   end
